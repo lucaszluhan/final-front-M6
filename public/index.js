@@ -1,5 +1,5 @@
 let api = axios.create({
-   baseURL: `https://trabalho-final-back-m5.herokuapp.com`,
+   baseURL: `https://trabalho-final-back-m6.herokuapp.com`,
 });
 
 loginValidation = () => {
