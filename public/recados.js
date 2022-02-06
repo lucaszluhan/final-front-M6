@@ -95,7 +95,7 @@ changeModalDeleteButton = (number) => {
 };
 
 deleteNote = (number) => {
-   api.delete(`/notes/${number}`)
+   api.delete(`/notes/${number}/${logUserID}`)
       .then((result) => {
          let listBody = document.querySelector('#listBody');
          listBody.innerHTML = '';
@@ -108,7 +108,7 @@ deleteNote = (number) => {
 
 editNote = (numb) => {
    if (!!document.querySelectorAll('input')[2].value && document.querySelectorAll('input')[3].value) {
-      api.put(`/notes/${numb}`, {
+      api.put(`/notes/${numb}/${logUserID}`, {
          detail: document.querySelectorAll('input')[3].value,
          description: document.querySelectorAll('input')[2].value,
       })
